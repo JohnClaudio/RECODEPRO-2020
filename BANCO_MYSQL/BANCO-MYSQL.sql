@@ -26,7 +26,7 @@ PRIMARY KEY(id_pedido));
 insert into produto (nome,descricao,nome_imagem,preco,preco_desconto) values 
 ('Violino', 'Violino 4/4 Arco Madeira C/ Breu Cavalete Estojo Luxo','./shop_items/01.png',321.00,300.00),
 ('violino','Violino Eagle 4/4 Ve 441 + Estojo, Arco Crina E Breu','./shop_items/02.png',1100.00,919.99),
-('violino','Violino 4/4 Ronsani Preto Estojo+ Arco+ Breu+ Estante+afinad','./shop_items/03.png',749.99,681.77);
+('violino','Violino 4/4 Ronsani Preto Estojo+ Arco+ Breu+ Estante+afinad','./shop_items/03.png',749.99,681.77),
 ('violino','Violino Artesanal Rolim Orquestra Profissional Tampo Inteiro','./shop_items/04.png',2000.00,1901.99);
 
 
