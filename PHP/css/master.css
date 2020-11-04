@@ -30,6 +30,7 @@ color:black;
 font-size: 15px;
 font-family: arial;
 }
+
 .centro{
   display: block;
   position: relative;
@@ -117,7 +118,7 @@ margin-top: 10px;
 .lojascolumn{
   width: 30%;
   height: 200px;
-  background-color:rgba(255, 0, 0, 0.7);
+  background-color:red;
   float: left;
   margin-left: 2%;
   min-width: 120px;
@@ -156,14 +157,11 @@ h2{
   width: 90%;
   margin:10px;
 }
-
 .formulario form textarea {
   height: 100px;
   width: 90%;
   text-align: center;
 }
-
-
 
 .borda{
   border-radius: 40px;
@@ -190,4 +188,33 @@ h2{
   min-width: 120px;
   text-align: center;
   display: inline;
+}
+
+.pedidos{
+  background-color: ;
+  width:  90%;
+  height: 400px;
+  margin:auto;
+  margin-top: 80px;
+
+  border-radius: 40px;
+
+}
+
+.pedidos table{
+  margin:auto;
+
+  border-radius: 40px;
+  width: 80%;
+}
+.pedidos input, button{
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-color: red;
+  color:black;
+  margin:auto;
+}
+.pedidos td{
+  padding:10px;
 }

@@ -2,9 +2,9 @@
 include_once("./layout/layout.php");
 montar_header();
 ?>
-
    <body>
-      <?php montar_menu(); ?>
+
+    <?php montar_menu(); ?>
 
       <main class="centro">
          <h2> Seja bem vindo(a)</h2>
