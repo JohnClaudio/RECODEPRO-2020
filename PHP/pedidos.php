@@ -2,14 +2,20 @@
 include_once("./layout/layout.php");
 montar_header();
 session_start();
-$_SESSION['sql'];
+$_SESSION['sql']=null;
 ?>
 
    <body>
       <?php montar_menu(); ?>
 
       <main >
-        <form class="pedidos" action="cadastrar_pedido.php" method="post">
+
+<div class="container">
+
+<div class="row">
+
+  <div class="col-md">
+    <form class="pedidos" action="cadastrar_pedido.php" method="post">
     <h2>Preencha os dados atentamente</h2>
     <?php if (!$_SESSION['sql'] != null) {
       echo   $_SESSION['sql'];
@@ -17,36 +23,48 @@ $_SESSION['sql'];
     }else {
     echo $_SESSION['sql'];
     }?>
-          <table>
-            <tr>
-              <td><p>Nome do cliente</p><input name="nome_cliente" type="text"placeholder="Digite seu nome"></td>
-            </tr>
 
-            <tr>
-              <td><p>Endereço</p><input name="endereco" type="text"placeholder="produto"></td>
-            </tr>
+    <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Seu nome</label>
+      <input type="text" name="nome_cliente" class="form-control" >
+    </div>
+    <div class="form-group col-md-6">
+      <label for="telefone">Telefone</label>
+      <input type="text" name="telefone" class="form-control" id="telefone">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Endereco</label>
+    <input type="text" class="form-control" id="inputAddress" name="endereco" placeholder="seu endereco">
+  </div>
+  <div class="form-group">
+    <label for="produto">Produto</label>
+    <input type="text" name="produto" class="form-control" id="produto" placeholder="nom e descrição do produto">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Quantidade">Quantidade</label>
+      <input type="text" name="qtd" class="form-control" id="Quantidade">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="Valor">Valor</label>
+      <input type="text" name="valor" class="form-control" id="Valor">
+    </div>
+  </div>
 
-             <tr>
-                <td><p>telefone</p><input name="telefone" type="text"placeholder="telefone"></td>
-             </tr>
+  <button type="submit" class="btn btn-primary">Realizar pedido</button>
+</form>
 
-             <tr>
-                <td><p>Produto</p><input name="produto" type="text"placeholder="descricao"></td>
-                <td><p>Valor R$</p><input name="valor" type="text"placeholder="ex: 200,00"></td>
-             </tr>
-             <tr>
-                <td><p>Quantidade </p><input name="qtd" type="text"placeholder="QTD"></td>
-             </tr>
-  <tr>
-  <td>      <button type="submit" name="button">enviar</button></td>
-
-  </tr>
-
-          </table>
-        </form>
 
       </main>
+  </div>
 
-  <?php montar_footer(); ?>
+</div>
+
+
+
+  </div>
    </body>
 </html>

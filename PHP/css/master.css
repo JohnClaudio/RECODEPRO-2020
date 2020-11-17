@@ -10,26 +10,6 @@ span{
   top:20px;
 }
 
-footer{
-  margin-top: 20%;
-  text-align: center;
-  color:red;
-
-
-}
-footer h4{
-display: inline-block;
-margin-right: 40%;
-margin-left: 40%;
-}
-
-footer p{
-position: relative;
-top:25px;
-color:black;
-font-size: 15px;
-font-family: arial;
-}
 
 .centro{
   display: block;
@@ -193,9 +173,7 @@ h2{
 .pedidos{
   background-color: ;
   width:  90%;
-  height: 400px;
-  margin:auto;
-  margin-top: 80px;
+
 
   border-radius: 40px;
 

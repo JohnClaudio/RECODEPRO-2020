@@ -6,31 +6,35 @@ montar_header();
 <body>
 <?php montar_menu(); ?>
 
+
+
+<div class="container mt-5">
   <header>
-    <h2>NOSSAS LOJAS</font></h2><hr>
+    <h2 class="display-6">NOSSAS LOJAS</h2><hr>
   </header>
 
-  <section class="lojas">
+<div class="row">
 
-  <?php foreach ($lojas = query_lojas() as $key => $value): ?>
-    <div class="lojascolumn">
-      <h3 class="title"><?php echo "{$value['estado']}"; ?></font></h3>
-      <p><?php echo "{$value['endereco']}"; ?></p>
-      <p><?php echo "{$value['cidade']}"; ?></p>
-      <p><?php echo "{$value['contato']}"; ?></p>
-    </div>
-<?php endforeach; ?>
+    <?php foreach ($lojas = query_lojas() as $key => $value): ?>
 
-</section>
+  <div class="col-sm-4">
+    <div class="jumbotron  mt-5 text-center">
+      <div class="text-center">
+        <h3 class="lead"><?php echo "{$value['estado']}"; ?></h3>
+        <p><?php echo "{$value['endereco']}"; ?></p>
+        <p><?php echo "{$value['cidade']}"; ?></p>
+        <p><?php echo "{$value['contato']}"; ?></p>
+      </div>
+        </div>
+            </div>
+  <?php endforeach; ?>
 
-    <footer>
-      <span>
-      <h4><font face="Arial">FORMAS DE PAGAMENTO</font></h4>
-      <img height="20%" width="40%"src="./imagens/cartoes.png" alt="cartões de crédito">
-      </span>
 
-    <p>&copy; RECODE PRO</p>
-    </footer>
+</div>
+
+
+  <?php montar_footer(); ?>
+</div>
 
 </body>
 

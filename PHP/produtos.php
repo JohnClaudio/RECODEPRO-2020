@@ -12,38 +12,54 @@ montar_header();
 
       <main>
          <hr>
-         <div class="categorias">
-            <h3>Categorias</h3>
-            <br>
 
-            <ul id="lista">
-              <li onclick="exibir_todos();">Todos Produtos</li>
+       <div class="row float-left">
+       <div class="col-sm-2">
+             <h3>Categorias</h3>
+             <br>
+             <ul id="lista">
+               <li onclick="exibir_todos();">Todos Produtos</li>
+               <?php
+               foreach($array = sql_categorias() as $key => $value):
+               ?>
+               <li onclick="exibir_categoria('<?php echo $value['categoria']?>');"> <?php echo "{$value['categoria']}". "(". query_contador($value['categoria']).")" ?>  </li>
+
+               <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+         <div class="container">
+
+            <div class="row">
+                  <div class="card-deck">
               <?php
-              foreach($array = sql_categorias() as $key => $value):
-              ?>
-              <li onclick="exibir_categoria('<?php echo $value['categoria']?>');"> <?php echo "{$value['categoria']}". "(". query_contador($value['categoria']).")" ?>  </li>
+              foreach($array = sql_produtos() as $key => $value):
+               ?>
+                <div class="col-sm-4 float-sm-left">
+                 <div class="card" id="<?php echo $value['categoria']?>" value="<?php echo $value['id_produto']?>" style="display:block; min-height: 400px; min-width:200px; margin:10px;">
+                  <img class="card-img-top" src="<?php echo $value['nome_imagem']; ?>" onclick="destacar(this)">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo $value['categoria']?></h5>
+                    <p class="card-text"><?php echo $value['descricao'] ?></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strike><?php echo $value['preco']; ?></strike></li>
+                    <li class="list-group-item"><?php echo $value['preco_desconto'];?></li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+
+                </div>
+              </div><br> <br>
 
               <?php endforeach; ?>
+    </div>
+            </div>
 
-         </ul>
-         </div>
+          </div>
 
-      <section class="produtos">
-           <?php
-           foreach($array = sql_produtos() as $key => $value):
-            ?>
-
-  <section class="box_produto" id="<?php echo $value['categoria']?>" value="<?php echo $value['id_produto']?>" style="display: block;">
-             <img src="<?php echo $value['nome_imagem']; ?>" onclick="destacar(this)">
-             <p class="desc"><?php echo $value['descricao'] ?></p>
-             <p class="desc2"><strike><?php echo $value['preco']; ?></strike></p>
-             <hr>
-             <p class="preco"><?php echo $value['preco_desconto'];?></p>
-          </section>
-
-        <?php endforeach; ?>
-         </section>
-    </main>
 
     <?php montar_footer() ?>
    </body>

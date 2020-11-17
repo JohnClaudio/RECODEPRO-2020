@@ -21,6 +21,18 @@ qtd_produto int(5) NOT NULL,
 valor_total DECIMAL(8,2) NOT NULL,
 PRIMARY KEY(id_pedido));
 
+create table lojas(
+id_loja int(11) not null AUTO_INCREMENT PRIMARY KEY,
+estado varchar(50),
+cidade varchar(50),
+endereco varchar(120),
+contato varchar(15));
+
+
+insert into lojas VALUES 
+(null,'SÃO PAULO','CENTRO - DIADEMA','Av. Sete de Setembro, n° 486','(11) 2353-2353'),
+(null,'RIO DE JANEIRO','NITEROI','R. Duque de Caxias, n° 325','(11) 5313-2553'),
+(null,'SÃO PAULO','VILA MARIANA','Av. Sete de Setembro, n° 486','(11) 9994-1145');
 
 insert into produto (categoria,descricao,nome_imagem,preco,preco_desconto) values 
 ('Violino', 'Violino 4/4 Arco Madeira C/ Breu Cavalete Estojo Luxo','./shop_items/01.png',321.00,300.00),
