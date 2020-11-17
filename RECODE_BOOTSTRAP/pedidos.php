@@ -54,7 +54,7 @@ $_SESSION['sql']=null;
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Realizar pedido</button>
+  <button type="submit" class="btn btn-danger">Realizar pedido</button>
 </form>
 
 

@@ -12,9 +12,8 @@ $qtd = $_POST['qtd'];
 
 $SQL= "insert into pedido (nome,endereco,telefone,nome_produto,valor_unitario,qtd_produto,valor_total)
  values ('$nome', '$end', '$telefone', '$produto', $valor, $qtd, 12)";
- echo "CODIGO: $SQL";
-$result = $conexao->query($SQL);
-if (mysqli_query($conexao, $SQL)) {
+
+if (mysqli_query($conexao, $SQL)===true) {
   $_SESSION['sql'] = "dados cadastrados com sucesso";
 
 }else {
@@ -22,4 +21,5 @@ if (mysqli_query($conexao, $SQL)) {
 }
 echo   $_SESSION['sql'] ;
 
+header('location: pedidos.php');
  ?>

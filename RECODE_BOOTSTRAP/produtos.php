@@ -1,7 +1,6 @@
 <?php
 include_once("./layout/layout.php");
 include_once("tools.php");
-
 montar_header();
  ?>
    <body>
@@ -9,25 +8,23 @@ montar_header();
       <header>
          <h2>PRODUTOS</h2>
       </header>
-
       <main>
          <hr>
+           <div class="row float-left">
+           <div class="col-sm-2">
+                 <h3>Categorias</h3>
+                 <br>
+                 <ul id="lista">
+                   <li onclick="exibir_todos();">Todos Produtos</li>
+                   <?php
+                   foreach($array = sql_categorias() as $key => $value):
+                   ?>
+                   <li onclick="exibir_categoria('<?php echo $value['categoria']?>');"> <?php echo "{$value['categoria']}". "(". query_contador($value['categoria']).")" ?>  </li>
 
-       <div class="row float-left">
-       <div class="col-sm-2">
-             <h3>Categorias</h3>
-             <br>
-             <ul id="lista">
-               <li onclick="exibir_todos();">Todos Produtos</li>
-               <?php
-               foreach($array = sql_categorias() as $key => $value):
-               ?>
-               <li onclick="exibir_categoria('<?php echo $value['categoria']?>');"> <?php echo "{$value['categoria']}". "(". query_contador($value['categoria']).")" ?>  </li>
-
-               <?php endforeach; ?>
-          </ul>
-        </div>
-      </div>
+                   <?php endforeach; ?>
+              </ul>
+            </div>
+          </div>
          <div class="container">
 
             <div class="row">
@@ -42,13 +39,13 @@ montar_header();
                     <h5 class="card-title"><?php echo $value['categoria']?></h5>
                     <p class="card-text"><?php echo $value['descricao'] ?></p>
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strike><?php echo $value['preco']; ?></strike></li>
-                    <li class="list-group-item"><?php echo $value['preco_desconto'];?></li>
+                  <ul class="list-group list-group-flush text-center">
+                    <li class="list-group-item"><strike>R$ <?php echo $value['preco']; ?></strike></li>
+                    <li class="list-group-item text-danger"><h4>R$ <?php echo $value['preco_desconto'];?></h4></li>
                   </ul>
-                  <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                  <div class="card-body text-center">
+                    <a href="#" class="card-link">Comprar</a>
+
                   </div>
 
                 </div>
