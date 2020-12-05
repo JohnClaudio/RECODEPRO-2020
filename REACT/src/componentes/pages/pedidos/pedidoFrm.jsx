@@ -1,10 +1,29 @@
 import React from 'react'
 
 export default function PedidoFrm () {
-    return(
+
+        const enviar = async (evento) => {
+        
+
+            const url = "http://localhost/react/src/controler/cadastrar_pedido.php";
+            const dados = new FormData(evento.target);
+            const cabecalho = {
+                method: "POST",
+                body: dados
+            };
     
+            const resposta  = await fetch(url, cabecalho);
+            const resultado = await resposta.json();
+            console.log(resultado);
+        }
+    
+
+    
+    //const url = "http://localhost/react/src/controler/cadastrar_pedido.php"
+    return(
+  
     <div>
-    <form>
+    <form onSubmit={enviar} >
   <div className="form-row">
     <div className="form-group col-md-6">
       <label>Seu nome</label>
@@ -12,7 +31,7 @@ export default function PedidoFrm () {
     </div>
     <div className="form-group col-md-6">
       <label for="telefone">Telefone</label>
-      <input type="text" name="telefone" class="form-control" id="telefone"/>
+      <input type="text" name="telefone" className="form-control" id="telefone"/>
     </div>
   </div>
   <div className="form-group">
@@ -34,7 +53,7 @@ export default function PedidoFrm () {
     </div>
   </div>
 
-  <button type="submit" className="btn btn-danger">Realizar pedido</button>
+  <button style={{width:"50%"}} type="submit" className="btn btn-danger">Realizar pedido</button>
 </form>
 
         </div>

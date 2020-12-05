@@ -5,7 +5,7 @@ import telefone from './telefone.png'
 export default function Lista_contato()  {
     return(
         <div>   
-            <div class="mt-5 row alert alert-danger">
+            <div class="mt-5 row alert ">
             
             <div class="col-sm-5 ml-5  text-center">
                 <img src={wpp} width="60px" />

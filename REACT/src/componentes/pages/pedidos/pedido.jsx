@@ -6,8 +6,8 @@ export default class Pedido extends React.Component{
 
     render(){
     return(
-    <div>
-     <p>oi </p>
+    <div className="container mt-5">
+
     <PedidoFrm></PedidoFrm>
 
     </div>
