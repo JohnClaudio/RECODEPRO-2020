@@ -1,0 +1,39 @@
+<html>
+
+<%- include('layout/head.ejs') %>
+
+<body>
+    <div class="container mt-5">
+
+        <% if(dados) { %>
+
+        <div class="alert alert-success" role="alert">
+            Produto cadastrado com sucesso
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>CODIGO PRODUTO</th>
+                <th>nome do produto</th>
+                <th>R$</th>
+            </tr>
+            <tr>
+
+                <% for(var i=0;i<dados.length;i++) { %>
+                <td><%= dados[i].codigo %></td>
+                <td><%= dados[i].nome %></td>
+                <td><%= dados[i].valor %></td>
+                <% } %>
+
+            </tr>
+        </table>
+
+        <% }%>
+    
+        <a href="/" class="btn btn-success">Retornar</a>
+    </div>
+
+
+</body>
+
+</html>
