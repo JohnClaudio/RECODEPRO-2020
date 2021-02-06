@@ -1,16 +1,16 @@
 const musicas = [
     { 
-        descricao:" titulo Sain't so.",
+        descricao:"Weezer Say It Ain't So.",
         video:"https://www.youtube.com/embed/zo-x4PU8S6g"
        
     },
     { 
-        descricao:"titulo Photograp",
+        descricao:"Weezer Photograph",
         video:"https://www.youtube.com/embed/5q4K8BOURQg"
     },
     { 
         id:1, 
-        descricao:"titulo undone",
+        descricao:"Weezer Undone",
        // descricao:" If you want to destroy my sweater Hold this thread as I walk away Watch me unravel, I'll soon be naked Lying on the floor (lying on the floor) I've come undone If you want to destroy my sweater Hold this thread as I walk away (as I walk away) Watch me unravel, I'll soon be naked Lying on the floor (lying on the floor) I've come undone",
         video:"https://www.youtube.com/embed/LHQqqM5sr7g"
     

@@ -2,11 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 import letraMusica from '../../actions/musica'
-import tituloMusica from '../../actions/tituloMusica'
+import textoCard from '../../actions/textoCard'
 
 function Menu (props){
     return(
-        <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-success">
+        <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" >We Are Weezer</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,16 +16,16 @@ function Menu (props){
             <ul class="navbar-nav">
 
               <li class="nav-item ">
-                <a class="nav-link text-white"  value="1" onClick={e => props.alterarLetra(0)}>Say't soo</a>
+                <a class="nav-link text-white"  value="1" onClick={e => props.alterarLetra(0)}>Say It Ain't So.</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white"  value="2" onClick={e => props.alterarLetra(1)}>Segunda</a>
+                <a class="nav-link text-white"  value="2" onClick={e => props.alterarLetra(1)}>Photograph</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white"  value="3" onClick={e => props.alterarLetra(2)}>Terceira</a>
+                <a class="nav-link text-white"  value="3" onClick={e => props.alterarLetra(2)}>Undone</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Historia</a>
+                <a class="nav-link text-white" value="3" onClick={e => props.alterarTexto(3)}> Historia</a>
               </li>
             </ul>
           </div>
@@ -41,8 +41,8 @@ function mapDispatchToProps (dispatch){
           dispatch(action)
         },
   
-        alterarTitulo (titulo) {
-          const action = tituloMusica(titulo)
+        alterarTexto (texto) {
+          const action = textoCard(texto)
           dispatch(action)
         }
       }

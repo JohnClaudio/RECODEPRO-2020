@@ -1,30 +1,42 @@
 import React from "react";
 import './Letra.css'
 import Video from '../Video/Video'
+import CardText from '../CardText/CardText'
 import { connect } from 'react-redux';
 
 import letraMusica from '../../actions/musica'
-import tituloMusica from '../../actions/tituloMusica'
+import textoCard from '../../actions/textoCard'
 
 function Letra (props){
     const titulo = props.titulo
-    const lancamento = props.lancamento
+    const texto = props.texto
     const letra = props.letra
     const video = props.video
 
     return(
+        <>
+    <div className="row">
+        <div className="col-sm-4">
         <div className="CardLetra mt-4">
         <p>{props.letra}</p>
         <Video video={props.video}></Video>
-  </div>
+         </div>
+         </div>
+        
+        <div className="col-sm-4">
+    <div className="Cardtexto ml-4"></div> <CardText texto={props.texto}>oi</CardText>
+    </div>
+
+    </div>
+ 
+  </>
     )
 }
 
 function mapear_estados_de_props (state){
     return {
     
-            titulo: state.titulos.titulo,
-            lancamento: state.titulos.lancamento,
+            texto: state.textoCard.texto,
             letra: state.letras.letra,
             video: state.letras.video
     }
@@ -39,7 +51,7 @@ function mapear_estados_de_props (state){
           },
     
           alterarTitulo (titulo) {
-            const action = tituloMusica(titulo)
+            const action = textoCard(titulo)
             dispatch(action)
           }
         }
@@ -48,5 +60,5 @@ function mapear_estados_de_props (state){
     
     export default connect(
         mapear_estados_de_props,
-    
+        mapDispatchToProps
         )(Letra)

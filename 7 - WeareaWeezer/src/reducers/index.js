@@ -1,9 +1,9 @@
 import  letras from './letras'
-import  titulos  from './titulos'
+import  textoCard  from './textoCard'
 
 import {combineReducers} from 'redux'
 
 export default combineReducers({
-    titulos,
-    letras
+    textoCard,
+    letras,
 })
