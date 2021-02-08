@@ -12,10 +12,7 @@ return(
     <Menu />
   
    <Routers />
-   { /*
-    <MeuTexto
-    nome= "joao"
-   sobrenome="claudio" />*/}
+   { }
  
 <Footer />
 
