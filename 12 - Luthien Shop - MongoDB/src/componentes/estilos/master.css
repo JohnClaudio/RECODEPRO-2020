@@ -1,0 +1,207 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+body{
+  font-family: Arial;
+}
+span{
+  position: relative;
+  top:20px;
+}
+
+.card{
+  display:block; 
+  min-height: 400px;
+  min-width:200px; 
+  margin:10px;
+}
+.card img {
+  max-height: 250;
+  max-width: 300;
+}
+.centro{
+  display: block;
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+
+/*-------- CSS PRODUTOS----- */
+.produtos{
+  width: 90%;
+  margin-left: 10%;
+
+}
+
+/*-------- ESTRUTURA DO CARD_PRODUTO--------------*/
+.box_produto{
+  height: auto;
+  width: 20%;
+  background-color: white;
+  margin: 50px 30px 20px 20px;
+  float: left;
+  border-radius: 40px;
+  min-width: 150px;
+  min-height: 100px;
+}
+
+.box_produto img{
+  height: 90%;
+  width: 90%;
+  margin: 10px 30px 2px;
+  display: block;
+}
+
+.box_produto hr{
+margin-top: 10px;
+}
+
+
+/*-------------- DESCRICAO PRODUTOS-----------------*/
+.desc2{
+ font-size: 18px;
+ color: red;
+ text-align: center;
+ margin-bottom: 5%;
+ margin-top: 20%;
+}
+
+.desc{
+ font-size: 13px;
+ margin: 5px 0px 30px;
+ min-width: 90%;
+}
+
+.preco{
+ margin-top: 5px;
+ font-size: 25px;
+ color: red;
+ text-align: center;
+ background-color: red;
+ color: white;
+ border-radius: 40px;
+ min-width: 100px;
+}
+
+/*DESCRICAO PRODUTOS FIM*/
+
+.categorias{
+  margin-top: 10px;
+  width: 10%;
+  float: left;
+  font-family: arial, bold;
+  min-width: 4%;
+  min-width: 80px;
+}
+
+
+.lojas{
+  background-color: black;
+  color:white;
+  width: 100%;
+  margin-top: 3%;
+  text-align: center;
+
+}
+.lojascolumn{
+  width: 30%;
+  height: 200px;
+  background-color:red;
+  float: left;
+  margin-left: 2%;
+  min-width: 120px;
+}
+
+.lojascolumn p{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.title{
+  font-size: 30px;
+  padding: 10px;
+}
+
+h2{
+  text-align: center;
+  margin:5px;
+}
+
+.formulario form{
+  color:black;
+  width: 40%;
+  background-color: none;
+  margin-top: 10%;
+  margin-left: 30%;
+  text-align: center;
+}
+.formulario form p {
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+}
+.formulario form input {
+  height: 50px;
+  width: 90%;
+  margin:10px;
+}
+.formulario form textarea {
+  height: 100px;
+  width: 90%;
+  text-align: center;
+}
+
+.borda{
+  border-radius: 40px;
+  background-color: red;
+  color: white;
+}
+.contato{
+  color:white;
+  height: 80%;
+  width: 100%;
+
+}
+.contato p {
+  font-size: 30px;
+  color: white;
+  position: relative;
+
+}
+.telefones{
+  width: 30%;
+  height: 100px;
+  float: left;
+  margin-left: 14%;
+  min-width: 120px;
+  text-align: center;
+  display: inline;
+}
+
+.pedidos{
+  background-color: ;
+  width:  90%;
+
+
+  border-radius: 40px;
+
+}
+
+.pedidos table{
+  margin:auto;
+
+  border-radius: 40px;
+  width: 80%;
+}
+.pedidos input, button{
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-color: red;
+  color:black;
+  margin:auto;
+}
+.pedidos td{
+  padding:10px;
+}
