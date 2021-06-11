@@ -8,7 +8,7 @@
 - [x] PHP
 - [x] NODEJS 
 - [x] REACTJS
-- [x] HTML,CSS,JS
+- [x] HTML,CSS,JS E BOOTSTRAP
 - [x] MYSQL,MONGODB 
 
 ## Aproveitamento 
