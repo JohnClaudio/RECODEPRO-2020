@@ -1,6 +1,6 @@
 # RECODE PRO 2020
 
-### Template dos projetos realizados na RECODE PRO 2020 
+### Template dos Projetos Realizados na RECODE PRO 2020 
 
 Recode PRO é um programa de formação de desenvolvimento fullstack com ênfase no trabalho de equipe e habilidade socioemocionais. Neste curso foi abordado diversas tecnologias backend/frontend, metodologias SCRUM/KANBAN, avaliações 360 em SQUAD e mentorias para a realização do projeto final.
 
